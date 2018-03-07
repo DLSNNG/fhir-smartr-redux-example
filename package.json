@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "fhir-smartr-redux": "0.0.19",
+    "fhir-smartr-redux": "0.0.48",
     "moment": "^2.20.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

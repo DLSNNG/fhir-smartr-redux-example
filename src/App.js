@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import CurrentPatientHome from './pages/CurrentPatientHome.js';
 import PatientSearch from './pages/PatientSearch.js';
 import PatientDetails from './pages/PatientDetails.js';
 //import EncounterDetails from './pages/EncounterDetails.js';
@@ -12,7 +13,8 @@ class App extends Component {
       <div className="App container">
         <h1>Smart on FHIR!</h1>
         <Switch>
-          <Route exact path='/' component={PatientSearch} />
+          <Route exact path='/' component={CurrentPatientHome} />
+          <Route exact path='/patient' component={PatientSearch} />
           <Route path='/patient/:id' component={PatientDetails} />
         </Switch>
       </div>

@@ -6,7 +6,7 @@ const DiagnosticReportTeaserView = ({ resource }) => {
   const code = report.code.coding[0].code;
   const name = report.code.coding[0].display;
   return (
-     <span className="diagnostic-report-name">{name} ({code})</span>
+     <span className="diagnostic-report-name">{name} ({code}) {}</span>
   )
 }
 

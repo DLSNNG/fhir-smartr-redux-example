@@ -18,7 +18,31 @@
   font-size: large;
 }
 
+.patient-dashboard {
+  margin-bottom: 50px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.dashboard-widget {
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 30px;
+  margin: 10px;
+  box-shadow: 5px 5px 45px #929494;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #707070;
+}
+
+.dashboard-widget.dark {
+  background-color: #333;
+  color: #e1e1e1;
+}
+
+.dashboard-widget-title {
+  padding-left: 30px;
 }
