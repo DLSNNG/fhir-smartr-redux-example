@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import { SmartQuery, SmartPatient, SmartPatientQuery, Resource, ResourceList, ResourceArray } from 'fhir-smartr-redux'
 import PatientDetailView from '../components/PatientDetailView'
 import A1CGraph from '../components/A1CGraph'
+import A1CPlaceholder from '../components/A1CPlaceholder'
 import LDLGraph from '../components/LDLGraph'
+import LDLPlaceholder from '../components/LDLPlaceholder'
 import SodiumGraph from '../components/SodiumGraph'
+import SodiumPlaceholder from '../components/SodiumPlaceholder'
 import GlucoseGraph from '../components/GlucoseGraph'
+import GlucosePlaceholder from '../components/GlucosePlaceholder'
 
 class CurrentPatientHome extends Component {
   // use ccf9949d-a00a-473e-8583-64731d2a86c1 as example
@@ -30,14 +34,14 @@ class CurrentPatientHome extends Component {
           <div className="row">
             <div className="col-md-6">
               <SmartPatient namespace="a1c">
-                <ResourceArray emptyMessage="No previous A1C performed on this patient">
+                <ResourceArray placeholder={A1CPlaceholder}>
                   <A1CGraph />
                 </ResourceArray>
               </SmartPatient>
             </div>
             <div className="col-md-6">
               <SmartPatient namespace="ldl">
-                <ResourceArray emptyMessage="No previous LDL performed on this patient">
+                <ResourceArray placeholder={LDLPlaceholder}>
                   <LDLGraph />
                 </ResourceArray>
               </SmartPatient>
@@ -46,14 +50,14 @@ class CurrentPatientHome extends Component {
           <div className="row">
             <div className="col-md-6">
               <SmartPatient namespace="sodium">
-                <ResourceArray emptyMessage="No previous Sodium performed on this patient">
+                <ResourceArray placeholder={SodiumPlaceholder}>
                   <SodiumGraph />
                 </ResourceArray>
               </SmartPatient>
             </div>
             <div className="col-md-6">
               <SmartPatient namespace="glucose">
-                <ResourceArray emptyMessage="No previous Glucose performed on this patient">
+                <ResourceArray placeholder={GlucosePlaceholder}>
                   <GlucoseGraph />
                 </ResourceArray>
               </SmartPatient>

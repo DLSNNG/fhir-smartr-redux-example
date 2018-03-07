@@ -5,11 +5,14 @@ import LoadingSpinner from '../components/LoadingSpinner'
 import PatientSearchForm from '../components/PatientSearchForm'
 import PatientDetailView from '../components/PatientDetailView'
 import ObservationTeaserView from '../components/ObservationTeaserView'
-import HealthMeter from '../components/HealthMeter'
 import A1CGraph from '../components/A1CGraph'
+import A1CPlaceholder from '../components/A1CPlaceholder'
 import LDLGraph from '../components/LDLGraph'
+import LDLPlaceholder from '../components/LDLPlaceholder'
 import SodiumGraph from '../components/SodiumGraph'
+import SodiumPlaceholder from '../components/SodiumPlaceholder'
 import GlucoseGraph from '../components/GlucoseGraph'
+import GlucosePlaceholder from '../components/GlucosePlaceholder'
 
 class PatientDetails extends Component {
 
@@ -23,6 +26,7 @@ class PatientDetails extends Component {
         value: entry.resource.valueQuantity.value 
       } 
     }
+    
     return (
       <div className="container">
         <SmartQuery namespace="Patient" query={{ type: "Patient", id: id }} />
@@ -44,14 +48,14 @@ class PatientDetails extends Component {
           <div className="row">
             <div className="col-md-6">
               <Smart namespace="a1c">
-                <ResourceArray emptyMessage="No previous A1C performed on this patient">
+                <ResourceArray placeholder={A1CPlaceholder}>
                   <A1CGraph />
                 </ResourceArray>
               </Smart>
             </div>
             <div className="col-md-6">
               <Smart namespace="ldl">
-                <ResourceArray emptyMessage="No previous LDL performed on this patient">
+                <ResourceArray placeholder={LDLPlaceholder}>
                   <LDLGraph />
                 </ResourceArray>
               </Smart>
@@ -60,14 +64,14 @@ class PatientDetails extends Component {
           <div className="row">
             <div className="col-md-6">
               <Smart namespace="sodium">
-                <ResourceArray emptyMessage="No previous Sodium performed on this patient">
+                <ResourceArray placeholder={SodiumPlaceholder}>
                   <SodiumGraph />
                 </ResourceArray>
               </Smart>
             </div>
             <div className="col-md-6">
               <Smart namespace="glucose">
-                <ResourceArray emptyMessage="No previous Glucose performed on this patient">
+                <ResourceArray placeholder={GlucosePlaceholder}>
                   <GlucoseGraph />
                 </ResourceArray>
               </Smart>

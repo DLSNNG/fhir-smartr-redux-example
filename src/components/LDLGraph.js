@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import * as moment from 'moment'
-import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceArea, ReferenceLine } from 'recharts'
+import { ResponsiveContainer, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ReferenceLine } from 'recharts'
 
 const LDLGraph = ({ data }) => {
   console.log(data);

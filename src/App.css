@@ -46,3 +46,14 @@
 .dashboard-widget-title {
   padding-left: 30px;
 }
+
+.placeholder {
+  height: 300px;
+  text-align: center;
+}
+
+.placeholder .fa {
+  font-size: 200px;
+  text-align: center;
+  width: 100%;
+}
