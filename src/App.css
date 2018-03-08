@@ -10,13 +10,37 @@
   color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.app-title {
+  font-size: 2.7em;
+  padding: 5px;
+  color: #808080;
+}
+
+.app-title .fa {
+  color: #F50202;
 }
 
 .App-intro {
   font-size: large;
 }
+
+.patient-detail-view {
+  float: left;
+  width: 100%;
+  color: #545454;
+  background-color: #e1e1e1;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px -10px #07A89E;
+}
+
+.patient-detail-view h2 {
+  font-size: 2em;
+}
+
+
 
 .patient-dashboard {
   margin-bottom: 50px;
@@ -56,4 +80,12 @@
   font-size: 200px;
   text-align: center;
   width: 100%;
+}
+
+@media(max-width: 450px) {
+  .app-title {
+    font-size: 2em;
+    border-bottom: 3px solid #e1e1e1;
+    padding: 10px;
+  }
 }

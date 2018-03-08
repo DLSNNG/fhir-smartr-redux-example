@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <h1>Smart on FHIR!</h1>
+        <h1 className="app-title">Health Overview <i className="fa fa-heartbeat"></i></h1>
         <Switch>
           <Route exact path='/' component={CurrentPatientHome} />
           <Route exact path='/patient' component={PatientSearch} />
